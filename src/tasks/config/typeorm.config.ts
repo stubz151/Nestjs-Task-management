@@ -4,7 +4,7 @@ export const typeOrmConfig : TypeOrmModuleOptions = {
     type: 'postgres',
     host: 'localhost',
     port: 5432,
-    username: 'BeastLogin',
+    username: 'postgres',
     password: 'postgres',
     entities: [__dirname + '/../**/*.entity.{js,ts}'],
     synchronize: true,
