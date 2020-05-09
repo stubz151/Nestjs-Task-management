@@ -13,8 +13,9 @@ export class TasksService {
     private taskRepository : TaskRepository,
   ){}
 
-  async getTasks( taskFilterDto : GetTasksFilterDto)
+  async getTasks( taskFilterDto : GetTasksFilterDto) : Promise<Task[]>
   {
+    return this.taskRepository.getTasks(taskFilterDto);
   }
 
  async deleteTask(id: number) : Promise<void>{
